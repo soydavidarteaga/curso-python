@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 #FUNCIONES
 
 def factorial_numero(numero):
@@ -82,6 +84,14 @@ print suma(5,2,3)
 
 def suma(**kwargs):
 	valor = kwargs.get('valor','No contiene el valor')
-	print valor
+	return valor
 print suma(y = 9,z=3,d=4)
 
+#Clase 5: Lambdas
+
+mi_funcion = lambda v1,v2:  v1 + v2
+print mi_funcion(50,10)
+formato = lambda sentencia: '¿{}?'.format(sentencia)
+no_valor = lambda:10
+print(formato('Puedes hacer esto una pregunta'))
+print no_valor()
