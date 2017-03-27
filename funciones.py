@@ -146,3 +146,18 @@ def generador(*args):
 
 for valor in generador(1,2,3,4,5,6,7,8,9,10):
 	print(valor)
+
+#Clase 9: DocString
+def generadorDOc(*args):
+	"""Recibe N cantidad de numero y regresa el numero ademas de regresa True o False si el numero es mayor a 5 
+	"""
+	for valor in args:
+		yield valor * 10
+
+name = generador.__name__
+documentacion = generadorDOc.__doc__
+
+print(name, " : ")
+print(documentacion)
+
+'''Con interprete de python. Pasos 1 poner en consola: python3 , paso 2 poner en consola: from nombre_archivo import nombre_de_la_funcion Paso 3 poner en consola: help( nombre_de_la_funcion ) '''
