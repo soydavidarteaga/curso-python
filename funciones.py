@@ -95,3 +95,17 @@ formato = lambda sentencia: '¿{}?'.format(sentencia)
 no_valor = lambda:10
 print(formato('Puedes hacer esto una pregunta'))
 print no_valor()
+
+#Clase 6: Funciones Anidadas
+
+def crear_funcion(num_uno,num_dos):
+	#Closure
+	def validacion():
+		print "Se ejecuta una funcion"
+		return num_uno > 0 and num_dos > 0
+	return validacion
+def aplicar_funcion(func):
+	print func()
+
+nueva_funcion = crear_funcion(10,-5)
+aplicar_funcion(nueva_funcion)
