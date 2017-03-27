@@ -109,3 +109,29 @@ def aplicar_funcion(func):
 
 nueva_funcion = crear_funcion(10,-5)
 aplicar_funcion(nueva_funcion)
+
+#Clase 7: Decoradores
+#Un decorador nos va a ayudar a darle mayor funcionalidad a una funcion, es una funcion que recibe como parametro un funcion para poder crear c
+#A recibe como parametro B para poder crear C
+def decorator(is_valid):
+	def decorador(func): #A,B 
+		def before_action():
+			print("Vamos a ejecutar la funcion")
+		def after_action():
+			print("Se ejecuto la funcion")
+		def nueva_funcion(*args,**kwargs):
+			if is_valid:
+				before_action()
+			return func(*args,**kwargs)
+			after_action()
+		return nueva_funcion #C
+	return decorador
+
+@decorator(is_valid = True) 
+def saluda():
+	print("Hola Mundo")
+saluda()
+@decorator(is_valid = False)
+def suma(n1,n2):
+	return n1 + n2
+print suma(180,17)
