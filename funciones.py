@@ -12,7 +12,6 @@ print factorial_numero(4)
 print factorial_numero(5)
 print factorial_numero(6) 
 
-#Fin Clase 1
 
 #Clase 2
 def suma(v1,v2,v3):
@@ -42,7 +41,6 @@ def mostrar_resultado( funcion ):
 	print(funcion(6,8))
 mostrar_resultado(mi_variable)
 
-#Fin Clase 2
 
 #Clase 3
 
@@ -72,4 +70,18 @@ def crear_global():
 
 crear_global()
 print(nueva_variable)
+
+
+#Clase 4
+def suma(*argumentos):
+	resultado = 0
+	for argumento in argumentos:
+		resultado = resultado + argumento
+	return resultado
+print suma(5,2,3)
+
+def suma(**kwargs):
+	valor = kwargs.get('valor','No contiene el valor')
+	print valor
+print suma(y = 9,z=3,d=4)
 
