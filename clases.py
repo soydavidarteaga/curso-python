@@ -72,3 +72,18 @@ print( eduardo.password )
 #Quita clase
 circulo_uno = Circulo(4)
 print(circulo_uno.area())
+#Octava Clase
+class Animal:
+	volador = True
+
+class Cocodrilo(Animal):
+	def __init__(self,nombre):
+		self.nombre = nombre
+	@classmethod
+	def new(self,nombre):
+		cls.volador = False
+		return Cocodrilo(nombre)
+
+cocodrilo = Cocodrilo.new('coco')
+print(cocodrilo.nombre)
+print(cocodrilo.volador)
