@@ -36,13 +36,16 @@ class Usuario:
 	@password.setter
 	def password(self,valor):
 		self.__password = self.__generar_password(valor)
-'''Clase 3'''
+'''Clase 3 y Clase 5: Metodos estaticos'''
 class Circulo:
-	__pi = 3.1416
+	#Metodo estatico
+	@staticmethod
+	def pi():
+		return 3.1416
 	def __init__(self,radio):
 		self.radio = radio
-	def area(self):
-		return self.radio * self.__pi
+	def area(self): #Metodos de instancia
+		return self.radio * Circulo.pi()
 
 
 
@@ -62,7 +65,10 @@ circulo_dos = Circulo(6)
 
 print(circulo_uno.area())'''
 #Cuarta clase
-eduardo = Usuario('eduardo','eduardo123','eduardo@codigofacilito.com')
+'''eduardo = Usuario('eduardo','eduardo123','eduardo@codigofacilito.com')
 print( eduardo.password )
 eduardo.password = "Nuevo password"
-print( eduardo.password )
+print( eduardo.password )'''
+#Quita clase
+'''circulo_uno = Circulo(4)
+print(circulo_uno.area())'''
