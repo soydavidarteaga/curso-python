@@ -80,10 +80,40 @@ class Cocodrilo(Animal):
 	def __init__(self,nombre):
 		self.nombre = nombre
 	@classmethod
-	def new(self,nombre):
+	def new(cls,nombre):
 		cls.volador = False
 		return Cocodrilo(nombre)
 
 cocodrilo = Cocodrilo.new('coco')
 print(cocodrilo.nombre)
 print(cocodrilo.volador)
+
+#Clase Final: 
+class User:
+	#Metodos magicos
+	'''__init__'''
+	def __new__(cls):
+		print("Este es el primer metodo que se ejecuta")
+		return super().__new__(cls)
+	def __init__(self):
+		print("Este es el segundo metodo que se ejecuta")
+		self.__password = "Este es un secreto"
+	def __str__(self):
+		return "Estp se imprime cuando intento mostrar el objeto"
+	def __getattr__(self, nombre):
+		print("Aqui mostramos que no se encontro el atributo")
+	'''def mostrar_password(self):
+					print( self.__password )'''
+	
+
+usuario = User()
+print(usuario)
+print(usuario.apellido)
+'''usuario.__password = "Este no es secreto"
+usuario.nombre = 'Eduardo'
+print(usuario.nombre)
+print(usuario.__dict__)
+usuario.nombre = 'Eduardo'
+usuario.apellido = 'Vargas'
+print( usuario.nombre )
+print( usuario.__dict__ )'''
