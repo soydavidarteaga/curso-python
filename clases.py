@@ -20,7 +20,7 @@ class Lapiz:
 		
 	def es_valido_para_borrar(self):
 		return self.contiene_borrador 
-'''Clase 2'''
+'''Clase 2 y Clase 4: Properties'''
 class Usuario:
 	def __init__(self,username,password,email):
 		self.username = username
@@ -30,6 +30,12 @@ class Usuario:
 		return password.upper()
 	def get_password(self):
 		return self.__password
+	@property
+	def password(self):
+		return self.__password
+	@password.setter
+	def password(self,valor):
+		self.__password = self.__generar_password(valor)
 '''Clase 3'''
 class Circulo:
 	__pi = 3.1416
@@ -50,8 +56,13 @@ lapiz_generico.borrar()'''
 print(eduardo.username)
 print(eduardo.email)
 print(eduardo.get_password())'''
-
-circulo_uno = Circulo(4)
+#Tercera clase
+'''circulo_uno = Circulo(4)
 circulo_dos = Circulo(6)
 
-print(circulo_uno.area())
+print(circulo_uno.area())'''
+#Cuarta clase
+eduardo = Usuario('eduardo','eduardo123','eduardo@codigofacilito.com')
+print( eduardo.password )
+eduardo.password = "Nuevo password"
+print( eduardo.password )
