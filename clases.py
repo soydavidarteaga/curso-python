@@ -51,24 +51,24 @@ class Circulo:
 
 
 #Esto es un objeto
-'''lapiz_generico = Lapiz("Verde",True,True)
+lapiz_generico = Lapiz("Verde",True,True)
 lapiz_generico.dibujar()
-lapiz_generico.borrar()'''
+lapiz_generico.borrar()
 #Segunda clase
-'''eduardo = Usuario('eduardo','eduardo123','eduardo@codigofacilito.com')
+eduardo = Usuario('eduardo','eduardo123','eduardo@codigofacilito.com')
 print(eduardo.username)
 print(eduardo.email)
-print(eduardo.get_password())'''
+print(eduardo.get_password())
 #Tercera clase
-'''circulo_uno = Circulo(4)
+circulo_uno = Circulo(4)
 circulo_dos = Circulo(6)
 
-print(circulo_uno.area())'''
+print(circulo_uno.area())
 #Cuarta clase
-'''eduardo = Usuario('eduardo','eduardo123','eduardo@codigofacilito.com')
+eduardo = Usuario('eduardo','eduardo123','eduardo@codigofacilito.com')
 print( eduardo.password )
 eduardo.password = "Nuevo password"
-print( eduardo.password )'''
+print( eduardo.password )
 #Quita clase
-'''circulo_uno = Circulo(4)
-print(circulo_uno.area())'''
+circulo_uno = Circulo(4)
+print(circulo_uno.area())
