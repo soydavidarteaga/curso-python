@@ -9,18 +9,23 @@ class Felino(Animal): #Clase Padre
 	def cazar(self):
 		print("El felino esta cazando")
 class Mascota:
-	name = '' #Todas las mascotas necesita un nombre
+	def __init__(self,name):
+		self.name = name #Todas las mascotas necesita un nombre
 	def get_name(self):
 		print(self.name)
 class Gato(Felino,Mascota):
-	pass
+	def __init__(self,name):
+		Mascota.__init__(self,name)
+		self.name_gato = name
+	def get_name(self):#Sobre escritura de metodos
+		Mascota.get_name(self)
+		print("El nombre de el Gato es: {}".format(self.name))
 class Jaguar(Felino):
 	pass
 
-gato = Gato()
+gato = Gato('Patricio')
 jaguar = Jaguar()
 
 gato.cazar()
-gato.name = "Juancho"
 gato.get_name()
 print(gato.terrestre)
